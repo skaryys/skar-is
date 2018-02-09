@@ -1,0 +1,18 @@
+{
+  "name": "Skar.IS",
+  "version": "0.0.1",
+  "description": "CSS library improving the development of websites graphical interface",
+  "repository": "https://github.com/skaryys/Skar.IS.git",
+  "author": "Martin Škára <martin.skara@hendur.eu>(http://hendur.eu)",
+  "license": "MIT",
+  "main": "dist/main",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "run-sequence": "^2.2.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-size": "^3.0.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
