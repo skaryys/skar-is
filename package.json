@@ -6,6 +6,8 @@
   "author": "Martin Škára <martin.skara@hendur.eu>(http://hendur.eu)",
   "license": "MIT",
   "main": "dist/main",
+  "style": "dist/main.css",
+  "sass": "assets/scss/main.scss",
   "devDependencies": {
     "gulp": "^3.9.1",
     "run-sequence": "^2.2.1",
