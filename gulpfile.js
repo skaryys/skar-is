@@ -8,7 +8,7 @@ const size = require("gulp-size");
 const uglify = require("gulp-uglify");
 
 //supported browsers for autoprefixer
-const supportedBrowsers = ['>1%','last 2 versions', 'not ie < 10'];
+const supportedBrowsers = ['>1%','last 2 versions', 'not ie < 11'];
 
 //compile scss style
 gulp.task("styles", function() {
