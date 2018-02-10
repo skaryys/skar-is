@@ -8,9 +8,9 @@ const size = require("gulp-size");
 const uglify = require("gulp-uglify");
 
 //supported browsers for autoprefixer
-const supportedBrowsers = ['>0.5%', 'last 4 versions', 'Firefox ESR', 'not ie < 10'];
+const supportedBrowsers = ['>1%','last 2 versions', 'not ie < 10'];
 
-//compile scss styles
+//compile scss style
 gulp.task("styles", function() {
    return gulp.src("assets/scss/main.scss")
        .pipe(sass().on("error",sass.logError))
@@ -22,6 +22,7 @@ gulp.task("styles", function() {
        .pipe(size({ title: "Style file size:"}))
 });
 
+//compile javascripts
 gulp.task("scripts", function() {
    return gulp.src("assets/js/main.js")
        .pipe(uglify())
