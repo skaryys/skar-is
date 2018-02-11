@@ -1,5 +1,24 @@
+// FONTS
 //default fontFamily for whole website
 $fontFamily: "Montserrat", Arial, sans-serif;
+//default font-size base
+$fontSize: 62.5%;
+//headings font-weight
+$headingsFontWeight: 500;
+//paragraphs line-height
+$paragraphsLine: 1.75;
+//paragraphs font-size
+$paragraphsFontSize: 1.6rem;
+//blockquote line-height
+$blockquoteLine: 1.75;
+//blockquote font-size
+$blockquoteFontSize: 2.4rem;
+//text components (headings, paragraphs, blockquote, lists) margin-bottom
+$textsMargin: 2rem;
 
+// COLORS
 //default background-color of website
 $bg: white;
+//selection background-color and color
+$selectionBg: #282828;
+$selectionColor: white;

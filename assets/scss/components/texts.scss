@@ -1,0 +1,58 @@
+//headings
+
+.c-h1, .c-h2, .c-h3, .c-h4, .c-h5, .c-h6 {
+  margin-bottom: $textsMargin;
+  font-weight: $headingsFontWeight;
+}
+
+.c-h1 {
+  font-size: 4rem;
+}
+
+.c-h2 {
+  font-size: 3.7rem;
+}
+
+.c-h3 {
+  font-size: 3.4rem;
+}
+
+.c-h4 {
+  font-size: 3.1rem;
+}
+
+.c-h5 {
+  font-size: 2.8rem;
+}
+
+.c-h6 {
+  font-size: 2.5rem;
+}
+
+//paragraph
+
+.c-paragraph {
+  margin-bottom: $textsMargin;
+  line-height: $paragraphsLine;
+  font-size: $paragraphsFontSize;
+}
+
+//blockquote
+
+.c-blockquote {
+  margin-bottom: $textsMargin;
+  line-height: $blockquoteLine;
+  font-size: $blockquoteFontSize;
+  font-style: italic;
+}
+
+//lists
+
+.c-list {
+  padding-left: 2rem;
+  margin-bottom: $textsMargin;
+  li {
+    line-height: 3rem;
+    padding-left: 1rem;
+  }
+}
