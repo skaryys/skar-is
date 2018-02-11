@@ -1,6 +1,9 @@
-@import "base/settings";
+@import "base/settings"; //mandatory
 @import "base/resets";
 
+//COMPONENTS CLASSES
 @import "components/texts";
+@import "components/media";
 
+//HELPER CLASSES
 @import "base/helpers";
