@@ -1,0 +1,10 @@
+//card component
+.c-card {
+  position: relative;
+  width: 100%;
+  background-color: $cardBg;
+  box-shadow: $cardShadow;
+  .content {
+    padding: $cardPadding;
+  }
+}
