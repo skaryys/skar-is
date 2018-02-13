@@ -1,5 +1,9 @@
 @import "base/settings"; //mandatory
+@import "base/mixins"; //mandatory for other parts
 @import "base/resets";
+
+//GRID
+@import "grid/grid";
 
 //COMPONENTS CLASSES
 @import "components/texts";
