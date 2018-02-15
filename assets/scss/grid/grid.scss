@@ -31,10 +31,12 @@
 
 }
 
+//ROW
 .row {
   @include rowInit($columnsSpace);
 }
 
+//base style of columns
 .column {
   flex-grow: 1;
   flex-shrink: 0;
@@ -44,6 +46,7 @@
   padding-right: floor($columnsSpace / 2);
 }
 
+//make grid according to breakpoints
 @include gridInit($columns, "xs");
 
 @include break($screen-xs) {
