@@ -1,0 +1,25 @@
+//Pagination component
+.c-pagination {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  list-style: none;
+  li {
+    margin-left: $paginationSpace / 2;
+    margin-right: $paginationSpace / 2;
+    a {
+      display: inline-block;
+      width: $paginationItemWidthHeight;
+      text-align: center;
+      line-height: $paginationItemWidthHeight - 2 * $paginationBorderWidth;
+      border: $paginationBorderWidth solid $paginationColor;
+      color: $paginationColor;
+      transition: background-color 300ms, color 300ms;
+      &.active,&:hover {
+        background-color: $paginationColor;
+        color: $paginationActiveColor;
+      }
+    }
+  }
+}

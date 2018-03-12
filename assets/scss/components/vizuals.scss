@@ -1,0 +1,27 @@
+//normal vizual with bakcground
+.c-vizual {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: $vizualHeight;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $vizualBg;
+  overflow: hidden;
+}
+
+//video vizual component
+.c-videoVizual {
+  @extend .c-vizual;
+  video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}

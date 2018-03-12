@@ -1,40 +1,139 @@
-//GRID
-$parts: "columns", "orders", "align-self", "directions", "wraps", "justify", "items", "content";
-$columns: 12;
-$columnsSpace: 30px;
-//breakpoints
-$screen-xs: 480px;
-$screen-sm: 768px;
-$screen-md: 1024px;
-$screen-lg: 1200px;
-$screen-xl: 1320px;
-
-// FONTS
-//default fontFamily for whole website
-$fontFamily: "Montserrat", Arial, sans-serif;
-//default font-size base
-$fontSize: 62.5%;
-//headings font-weight
-$headingsFontWeight: 500;
-//paragraphs line-height
-$paragraphsLine: 1.75;
-//paragraphs font-size
-$paragraphsFontSize: 1.6rem;
-//blockquote line-height
-$blockquoteLine: 1.75;
-//blockquote font-size
-$blockquoteFontSize: 2.4rem;
-//text components (headings, paragraphs, blockquote, lists) margin-bottom
-$textsMargin: 2rem;
-
-// COLORS
-//default background-color of website
-$bg: white;
-//selection background-color and color
+//BASE STYLES SETTINGS
+$fontFamily: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, "Fira Sans", "Droid Sans", Ubuntu, Cantarell, sans-serif;
+$background: white;
+$fontSize: 1.6rem;
 $selectionBg: #282828;
 $selectionColor: white;
 
-//COMPONENTS
+//GRID SETTINGS
+$parts: "columns", "orders", "align-self", "directions", "wraps", "justify", "items", "content", "hide";
+$columns: 12;
+$columnsSpace: 3rem;
+//breakpoints in em (Breakpoint * font size = breakpoint in pixels)
+$screen-xs: 30em;
+$screen-sm: 48em;
+$screen-md: 64em;
+$screen-lg: 75em;
+$screen-xl: 82.5em;
+
+//TEXTS COMPONENTS SETTINGS
+$headingsMarginBottom: 2rem;
+$headingsFontWeight: 500;
+$h1fontSize: 3.6rem;
+$h2fontSize: 2.7rem;
+$h3fontSize: 2.1rem;
+$paragraphMarginBottom: 2rem;
+$paragraphLine: 1.75;
+$paragraphFontSize: 1.6rem;
+$listPaddingLeft: 2rem;
+$listMarginBottom: 2rem;
+$listLineHeight: 1.75;
+$listItemPaddingLeft: 2rem;
+
+//CARD COMPONENT SETTINGS
 $cardBg: white;
-$cardShadow: 0 5px 10px 0 hsla(0,0%,47%,.3);
-$cardPadding: 30px;
+$cardShadow: 0 .5rem 1rem 0 hsla(0,0%,47%,.3);
+$cardPadding: 3rem;
+
+//MENU COMPONENTS SETTINGS
+$menuBg: #282828;
+$menuFontSize: 1.8rem;
+//menu in hamburger mode
+$menuHeight: 6rem;
+$menuLineHeight: 4.2rem;
+$hamburgerWidth: 3rem;
+$hamburgerHeight: 2rem;
+$hamburgerLineHeight: .2rem;
+$hamburgerLineBg: white;
+$navMarginTop: 1.5rem;
+$navMarginBottom: 1.5rem;
+//breakpoint when hamburger menus change to normal
+$menuBreakpoint: $screen-md;
+//dimension for normal horizontal menu
+$menuDesktopHeight: 10rem;
+$menuDesktopItemsSpace: 2rem;
+//dimension for normal vertical menu
+$menuVerticalLogoTop: 4rem;
+$menuVerticalLogoBottom: 4rem;
+$menuVerticalNavTop: 0;
+$menuVerticalNavBottom: 4rem;
+$menuVerticalLineHeight: 5rem;
+
+//CAROUSEL COMPONENT SETTINGS
+$carouselLinkWidth: 8rem;
+$carouselArrowSize: 4rem;
+$carouselArrowColor: white;
+$carouselIndicatorsBottom: 2rem;
+$carouselIndicatorsWidth: 4rem;
+$carouselIndicatorsHeight: .5rem;
+$carouselIndicatorsColor: white;
+$carouselIndicatorsSpace: .6rem;
+
+//STICKY FOOTER COMPONENT SETTINGS
+$footerHeight: 10rem;
+$footerBg: #282828;
+
+//VIZUAL COMPONENTS SETTINGS
+$vizualHeight: 40rem;
+$vizualBg: #282828;
+
+//FORMS COMPONENTS SETTINGS
+//normal inputs
+$textInputHeight: 5rem;
+$textInputPadding: 1.5rem;
+$textInputFontSize: 1.8rem;
+$textInputBorder: .2rem solid #A9A8B2;
+$textInputBorderFocus: .2rem solid #282828;
+$textInputColor: #A9A8B2;
+$textInputColorFocus: #282828;
+$textInputPlaceholderColor: #A9A8B2;
+//range input
+$rangeInputThumbBorder: .2rem solid #A9A8B2;
+$rangeInputThumbHeight: 3.6rem;
+$rangeInputThumbWidth: 1.6rem;
+$rangeInputThumbBg: white;
+$rangeInputThumbMargin: -1.4rem;
+$rangeInputSliderHeight: 0.84rem;
+$rangeInputSliderBg: #282828;
+//svg input (radio+checkbox)
+$svgInputWidthHeight: 2.4rem;
+$svgInputPadding: .4rem;
+$svgInputBorder: .2rem solid #A9A8B2;
+$svgInputBg: white;
+$svgInputCheckedBorder: .2rem solid #282828;
+$svgInputCheckedBg: white;
+$svgInputCheckedColor: #282828;
+$svgInputBorderRadius: 50%;
+//selects
+$selectArrowColor: #A9A8B2;
+$selectArrowFocusColor: #282828;
+$selectArrowWidth: 1.6rem;
+$selectArrowHeight: .8rem;
+$selectArrowRight: 1.5rem;
+$selectArrowTop: 2rem;
+//buttons and button-like inputs
+$buttonPadding: 3rem;
+$buttonHeight: 5rem;
+$buttonBg: #282828;
+$buttonColor: white;
+$buttonFontSize: 1.6rem;
+
+//BREADCRUMBS COMPONENT SETTINGS
+$breadcrumbsPadding: 1.5rem 0;
+$breadcrumbsFontSize: 1.8rem;
+$breadcrumbsDividerPadding: 1rem;
+
+//PAGINATION COMPONENT SETTINGS
+$paginationSpace: 1rem;
+$paginationItemWidthHeight: 3.6rem;
+$paginationBorderWidth: .2rem;
+$paginationColor: #282828;
+$paginationActiveColor: white;
+
+//PROGRESS BAR COMPONENTS SETTINGS
+$progressHeight: 2rem;
+$progressBg: #A9A8B2;
+$progressValueBg: #282828;
+
+//MODAL COMPONENTS SETTINGS
+$overlayBg: rgba(0,0,0,0.9);

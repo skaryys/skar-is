@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- recommended meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+
+    <!-- skar-is CSS -->
+    <link rel="stylesheet" href="../dist/main.css">
+
+    <title>Example of Media Wrappers and Card components</title>
+
+    <!-- CSS styles just for this example -->
+    <style>
+        body {
+            margin-top: 3rem;
+        }
+        .column {
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 class="c-h1">Cards and Media wrappers example</h1>
+
+        <div class="row">
+            <div class="column xs-12 lg-default h-displayFlex">
+                <div class="c-card">
+                    <div class="c-mediaWrapper-16_9">
+                        <img src="https://picsum.photos/320/180/?random" alt="Picture"/>
+                    </div>
+                    <div class="content">
+                        <h2 class="c-h2">This is card with image</h2>
+                        <p class="c-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit nulla non aliquam mollis. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column xs-12 lg-default h-displayFlex">
+                <div class="c-card">
+                    <div class="c-mediaWrapper-4_3">
+                        <video autoplay loop muted width="320" height="240">
+                            <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
+                    <div class="content">
+                        <h2 class="c-h2">This is card with video</h2>
+                        <p class="c-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit nulla non aliquam mollis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column xs-12 lg-default h-displayFlex">
+                <div class="c-card">
+                    <div class="c-mediaWrapper-1_1">
+                        <iframe src="https://www.youtube.com/embed/NpEaa2P7qZI" width="560" height="315" frameborder="0"></iframe>
+                    </div>
+                    <div class="content">
+                        <h2 class="c-h2">This is card with embed video</h2>
+                        <p class="c-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit nulla non aliquam mollis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

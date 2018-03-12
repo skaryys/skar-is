@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- recommended meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+
+        <!-- skar-is CSS -->
+        <link rel="stylesheet" href="../dist/main.css">
+
+        <title>Grid examples</title>
+
+        <!-- CSS styles just for this example -->
+        <style>
+            .box {
+                width: 100%;
+                height: 12rem;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                color: white;
+                background-color: deeppink;
+                padding: 5px;
+            }
+            .column{
+                margin-bottom: 3rem;
+            }
+            body{
+                margin-top: 3rem;
+            }
+            .column:nth-child(even) .box {
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container">
+
+        <h1 class="c-h1">Grid examples</h1>
+
+        <h2 class="c-h2">Default columns</h2>
+        <div class="row">
+            <div class="column">
+                <div class="box">I am default column!</div>
+            </div>
+            <div class="column">
+                <div class="box">I am default column!</div>
+            </div>
+            <div class="column">
+                <div class="box">I am default column!</div>
+            </div>
+            <div class="column">
+                <div class="box">I am default column!</div>
+            </div>
+        </div>
+
+        <h2 class="c-h2">Responsive columns with size classes</h2>
+        <div class="row">
+            <div class="column xs-12 md-6 xl-4">
+                <div class="box">I am responsive column!</div>
+            </div>
+            <div class="column xs-12 md-6 xl-4">
+                <div class="box">I am responsive column!</div>
+            </div>
+            <div class="column xs-12 md-6 xl-4">
+                <div class="box">I am responsive column!</div>
+            </div>
+        </div>
+
+        <h2 class="c-h2">Stretch and grow columns</h2>
+        <div class="row">
+            <div class="column xs-stretch">
+                <div class="box">I am stretch column!</div>
+            </div>
+            <div class="column xs-grow">
+                <div class="box">I am default column!</div>
+            </div>
+        </div>
+
+        <h2 class="c-h2">Order classes</h2>
+        <div class="row">
+            <div class="column">
+                <div class="box">I am default column!</div>
+            </div>
+            <div class="column lg-orderFirst">
+                <div class="box">I should be first on bigscreen even thought I am last in HTML!</div>
+            </div>
+        </div>
+
+        <h2 class="c-h2">Justify-content, align-items, align-self</h2>
+        <div class="row xs-justifyCenter xs-itemsEnd">
+            <div class="column xs-3">
+                <div class="box">I am default column!</div>
+            </div>
+            <div class="column xs-3">
+                <div class="box" style="height: 80px">I am default column!</div>
+            </div>
+            <div class="column xs-3 xs-selfCenter">
+                <div class="box" style="height: 80px">I am default column!</div>
+            </div>
+        </div>
+
+        <h2 class="c-h2">Hide columns</h2>
+        <div class="row">
+            <div class="column lg-hide">
+                <div class="box">I am hidden on bigscreen!</div>
+            </div>
+            <div class="column lg-hide">
+                <div class="box">I am hidden on bigscreen!</div>
+            </div>
+            <div class="column lg-hide">
+                <div class="box">I am hidden on bigscreen!</div>
+            </div>
+            <div class="column">
+                <div class="box">I am always visible!</div>
+            </div>
+        </div>
+
+    </div>
+
+    </body>
+</html>

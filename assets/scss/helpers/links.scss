@@ -1,0 +1,17 @@
+//Link with underline effect on hover
+
+.h-linkUnderlineHover {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+//Link with no underline on hover
+
+.h-linkNoneHover {
+  text-decoration: underline !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+}

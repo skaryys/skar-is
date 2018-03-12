@@ -1,0 +1,46 @@
+//display helper classes
+
+.h-displayBlock {
+  display: block !important;
+}
+
+.h-displayNone {
+  display: none !important;
+}
+
+.h-displayInline {
+  display: inline !important;
+}
+
+.h-displayInlineBlock {
+  display: inline-block !important;
+}
+
+.h-displayTable {
+  display: table !important;
+}
+
+.h-displayTableCell {
+  display: table-cell !important;
+}
+
+.h-displayTableRow {
+  display: table-row !important;
+}
+
+.h-displayGrid {
+  display: grid !important;
+}
+
+.h-displayFlex {
+  display: flex !important;
+}
+
+.h-displayInlineFlex {
+  display: inline-flex !important;
+}
+
+//make circle element
+.h-circle {
+  border-radius: 50%;
+}

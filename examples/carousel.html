@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- recommended meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+
+    <!-- skar-is CSS -->
+    <link rel="stylesheet" href="../dist/main.css">
+
+    <title>Examples of Carousel</title>
+
+    <!-- CSS styles just for this example -->
+    <style>
+        body {
+            margin-top: 3rem;
+        }
+        .c-carousel {
+            margin-bottom: 3rem;
+        }
+        .c-carousel[data-carousel=carousel-2] .c-mediaWrapper-21_9 {
+            max-width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="c-h1">Carousel examples</h1>
+
+    <h2 class="c-h2">Slides without controls</h2>
+
+    <div class="c-carousel" data-carousel="carousel-1" data-autoslide="3000">
+        <div class="slide c-mediaWrapper-21_9">
+            <img src="https://picsum.photos/1320/743" alt="Picture"/>
+        </div>
+        <div class="slide c-mediaWrapper-21_9">
+            <img src="https://picsum.photos/1320/743" alt="Picture"/>
+        </div>
+        <div class="slide c-mediaWrapper-21_9">
+            <img src="https://picsum.photos/1320/743" alt="Picture"/>
+        </div>
+    </div>
+
+    <h2 class="c-h2">Slides with controls</h2>
+
+    <div class="c-carousel" data-carousel="carousel-2">
+        <div class="previous-slide" data-previous-carousel="carousel-2"></div>
+        <div class="slide c-mediaWrapper-21_9">
+            <img src="https://picsum.photos/1320/743" alt="Picture"/>
+        </div>
+        <div class="slide c-mediaWrapper-21_9">
+            <img src="https://picsum.photos/1320/743" alt="Picture"/>
+        </div>
+        <div class="slide c-mediaWrapper-21_9">
+            <img src="https://picsum.photos/1320/743" alt="Picture"/>
+        </div>
+        <div class="slide c-mediaWrapper-21_9">
+            <img src="https://picsum.photos/1320/743" alt="Picture"/>
+        </div>
+        <div class="slide c-mediaWrapper-21_9">
+            <img src="https://picsum.photos/1320/743" alt="Picture"/>
+        </div>
+        <div class="next-slide" data-next-carousel="carousel-2"></div>
+        <ul class="indicators">
+            <li class="active" data-numbers-carousel="carousel-2" data-number="1"></li>
+            <li data-numbers-carousel="carousel-2" data-number="2"></li>
+            <li data-numbers-carousel="carousel-2" data-number="3"></li>
+            <li data-numbers-carousel="carousel-2" data-number="4"></li>
+            <li data-numbers-carousel="carousel-2" data-number="5"></li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- jQuery and skar-is JS-->
+<script src="http://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+<script src="../dist/main.js"></script>
+
+</body>
+</html>

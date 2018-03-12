@@ -1,0 +1,28 @@
+//text helper classes
+
+.h-textLeft {
+  text-align: left !important;
+}
+
+.h-textRight {
+  text-align: right !important;
+}
+
+.h-textCenter {
+  text-align: center !important;
+}
+
+.h-textJustify {
+  text-align: justify !important;
+}
+
+.h-whitespaceNowrap {
+  white-space: nowrap !important;
+}
+
+.h-truncate {
+  max-width: 100% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}

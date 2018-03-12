@@ -1,0 +1,181 @@
+//horizontal menu component
+.c-menu {
+  position: relative;
+  top: 0;
+  width: 100%;
+  max-height: $menuHeight;
+  background-color: $menuBg;
+  transition: max-height 600ms;
+  overflow: hidden;
+  .wrapper {
+    position: relative;
+    display: block;
+    padding-left: $columnsSpace / 2;
+    padding-right: $columnsSpace / 2;
+  }
+  .logo {
+    height: $menuHeight;
+    display: flex;
+    align-items: center;
+    img {
+      display: inline-block;
+      max-height: 100%;
+    }
+  }
+  .nav {
+    position: relative;
+    overflow: auto;
+    margin-top: $navMarginTop;
+    margin-bottom: $navMarginBottom;
+  }
+  .nav-list {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    li {
+      font-size: $menuFontSize;
+      line-height: $menuLineHeight;
+      color: white;
+      a {
+        display: block;
+        &.active {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  //hamburger menu icon
+  .hamburger {
+    cursor: pointer;
+    position: absolute;
+    top: ($menuHeight - $hamburgerHeight) / 2;
+    right: $columnsSpace / 2;
+    width: $hamburgerWidth;
+    height: $hamburgerHeight;
+    .line,&:before,&:after {
+      width: 100%;
+      position: absolute;
+      height: $hamburgerLineHeight;
+      background-color: $hamburgerLineBg;
+    }
+    .line {
+      top: 50%;
+      transform: translateY(-50%);
+      transition: opacity 300ms;
+    }
+    &:before,&:after {
+      content: "";
+      transition: transform 300ms;
+    }
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
+  }
+
+  //when opened
+  &.opened {
+    max-height: 100vh;
+    .nav {
+      @include calc(max-height, "100vh - #{$menuHeight + $navMarginTop + $navMarginBottom}");
+    }
+    .hamburger {
+      .line {
+        opacity: 0;
+      }
+      &:before,&:after {
+        bottom: auto;
+        top: 50%;
+      }
+      &:before {
+        transform: rotate(-45deg) translateY(-50%);
+      }
+      &:after {
+        transform: rotate(45deg) translateY(-50%);
+      }
+    }
+  }
+
+}
+
+//desktop mode
+
+.c-menu, .c-menu.opened {
+
+    @include break($menuBreakpoint) {
+      //horizontal desktop menu
+      &.horizontal {
+      max-height: $menuDesktopHeight;
+        .wrapper {
+          display: flex;
+          align-items: center;
+        }
+        .logo {
+          height: $menuDesktopHeight;
+          margin-right: $menuDesktopItemsSpace;
+        }
+        .hamburger {
+          display: none;
+        }
+        .nav {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 0;
+          margin-bottom: 0;
+          max-height: $menuDesktopHeight;
+          width: 100%;
+        }
+        .nav-list {
+          text-align: left;
+          display: flex;
+          li {
+            display: inline-block;
+            line-height: $menuDesktopHeight;
+            padding-left: $menuDesktopItemsSpace / 2;
+            padding-right: $menuDesktopItemsSpace / 2;
+            white-space: nowrap;
+            a {
+              display: inline;
+              transition: opacity 300ms;
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+          }
+        }
+      }
+
+      //vertical desktop menu
+      &.vertical {
+        max-height: 100%;
+        overflow: auto;
+        .logo {
+          display: block;
+          height: auto;
+          text-align: center;
+          margin-top: $menuVerticalLogoTop;
+          margin-bottom: $menuVerticalLogoBottom;
+          img {
+            display: inline-block;
+          }
+        }
+        .nav {
+          margin-top: $menuVerticalNavTop;
+          margin-bottom: $menuVerticalNavBottom;
+        }
+        .nav-list {
+          li {
+            line-height: $menuVerticalLineHeight;
+          }
+        }
+        .hamburger {
+          display: none;
+        }
+      }
+    }
+
+}

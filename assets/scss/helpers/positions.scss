@@ -1,0 +1,34 @@
+//positioning helper classes
+
+.h-positionAbsolute, .h-positionAbsoluteCenter, .h-positionAbsoluteCover {
+  position: absolute !important;
+}
+
+.h-positionRelative {
+  position: relative !important;
+}
+
+.h-positionFixed, .h-positionFixedCenter, .h-positionFixedCover {
+  position: fixed !important;
+}
+
+.h-positionStatic {
+  position: static !important;
+}
+
+.h-positionAbsoluteCenter, .h-positionFixedCenter {
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%,-50%) !important;
+}
+
+.h-positionAbsoluteCover, .h-positionFixedCover {
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}
+
+.h-positionSticky {
+  position: sticky !important;
+}

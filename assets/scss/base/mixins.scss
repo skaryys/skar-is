@@ -7,8 +7,8 @@
 
 //row styles
 @mixin rowInit($margin) {
-  margin-left: - ceil($margin / 2);
-  margin-right: - ceil($margin / 2);
+  margin-left: - $margin / 2;
+  margin-right: - $margin / 2;
   display: flex;
   flex-wrap: wrap;
   &:after,&:before {
@@ -25,10 +25,14 @@
     @if $part == "columns" {
       @for $i from 1 through $columns_count {
         .#{$breakpoint}-#{$i} {
-          flex-grow: 0;
-          flex-shrink: 0;
-          flex-basis: #{$i / $columns_count * 100%};
+          flex: 0 0 #{$i / $columns_count * 100%};
         }
+      }
+      .#{$breakpoint}-stretch {
+         flex: none;
+      }
+      .#{$breakpoint}-default {
+        flex: 1 1 0;
       }
     }
 
@@ -154,6 +158,40 @@
       }
     }
 
+    @if $part == "hide" {
+      .#{$breakpoint}-hide {
+        display: none;
+      }
+    }
+
   }
 
+}
+
+//calc mixin
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+@mixin disableDefaults() {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: inherit;
+  &:-webkit-autofill {
+    background: inherit !important;
+    color: inherit !important;
+  }
+  &::-ms-expand,&::-webkit-clear-button,&::-webkit-search-decoration,&::-webkit-search-cancel-button,&::-webkit-search-results-button,&::-webkit-search-results-decoration {
+    display: none;
+    -webkit-appearance:none;
+  }
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }

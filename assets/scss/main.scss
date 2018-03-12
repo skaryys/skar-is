@@ -1,14 +1,31 @@
-@import "settings"; //mandatory
-@import "base/mixins"; //mandatory for other parts
+//MANDATORY PARTS
+@import "settings";
+@import "base/functions";
+@import "base/mixins";
 @import "base/resets";
+
 
 //GRID
 @import "grid/grid";
+
 
 //COMPONENTS CLASSES
 @import "components/texts";
 @import "components/media";
 @import "components/card";
+@import "components/menu";
+@import "components/carousel";
+@import "components/footer";
+@import "components/vizuals";
+@import "components/forms";
+@import "components/breadcrumbs";
+@import "components/pagination";
+@import "components/progress";
+@import "components/modal";
 
 //HELPER CLASSES
-@import "base/helpers";
+@import "helpers/display";
+@import "helpers/float";
+@import "helpers/links";
+@import "helpers/positions";
+@import "helpers/text";

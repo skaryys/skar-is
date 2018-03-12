@@ -1,0 +1,108 @@
+//Text input (and other familiar inputs like email, tel and so on...)
+.c-input {
+  @include disableDefaults;
+  width: 100%;
+  max-width: 100%;
+  transition: border 300ms;
+  border: $textInputBorder;
+  font-size: $textInputFontSize;
+  padding-left: $textInputPadding;
+  padding-right: $textInputPadding;
+  height: $textInputHeight;
+  color: $textInputColor;
+  &:focus {
+    border: $textInputBorderFocus;
+    color: $textInputColorFocus;
+  }
+  &::-webkit-input-placeholder {
+    color: $textInputColor;
+  }
+}
+
+//specific styles for select when using .c-input class
+select.c-input:not([multiple]) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cstyle%3E.path-drop-st0{fill:#{str-replace(to-string($selectArrowColor),"#","%23")}}%3C/style%3E%3Cpath class='path-drop-st0' d='M6 6L0 0h12L6 6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: $selectArrowWidth $selectArrowHeight;
+    background-position: right $selectArrowRight top $selectArrowTop;
+    padding-right: $selectArrowRight + $selectArrowWidth + $textInputPadding;
+    &:focus {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cstyle%3E.path-drop-st0{fill:#{str-replace(to-string($selectArrowFocusColor),"#","%23")}}%3C/style%3E%3Cpath class='path-drop-st0' d='M6 6L0 0h12L6 6z'/%3E%3C/svg%3E");
+    }
+}
+
+//Range input
+.c-rangeInput {
+  @include disableDefaults;
+  width: 100%;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: $rangeInputThumbBorder;
+    height: $rangeInputThumbHeight;
+    width: $rangeInputThumbWidth;
+    background-color: $rangeInputThumbBg;
+    cursor: pointer;
+    margin-top: $rangeInputThumbMargin;
+  }
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: $rangeInputSliderHeight;
+    cursor: pointer;
+    background: $rangeInputSliderBg;
+  }
+}
+
+//radio and checkbox inputs
+.c-svgInput {
+  position: relative;
+  display: inline-block;
+  width: $svgInputWidthHeight;
+  height: $svgInputWidthHeight;
+  svg {
+    width: $svgInputWidthHeight;
+    height: $svgInputWidthHeight;
+    padding: $svgInputPadding;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: $svgInputBorder;
+    border-radius: $svgInputBorderRadius;
+    path,circle {
+      opacity: 0;
+      fill: $svgInputBg;
+    }
+  }
+  label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+  input {
+    display: none;
+    &:checked {
+      &~label {
+        svg {
+          border: $svgInputCheckedBorder;
+          background-color: $svgInputCheckedBg;
+          path,circle {
+            opacity: 1;
+            fill: $svgInputCheckedColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+//buttons and button-like inputs
+.c-button {
+  @include disableDefaults;
+  display: inline-block;
+  padding: 0 $buttonPadding;
+  line-height: $buttonHeight;
+  text-align: center;
+  background-color: $buttonBg;
+  color: $buttonColor;
+  font-size: $buttonFontSize;
+  cursor: pointer;
+}

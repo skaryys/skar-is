@@ -1,0 +1,19 @@
+//Breadcrumbs component
+.c-breadcrumbs {
+  padding: $breadcrumbsPadding;
+  list-style: none;
+  li {
+    display: inline;
+    font-size: $breadcrumbsFontSize;
+    &+li:before {
+      padding: $breadcrumbsDividerPadding;
+      content: "/\00a0";
+    }
+    a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

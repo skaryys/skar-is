@@ -1,0 +1,69 @@
+//carousel component
+.c-carousel {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  .slide {
+    flex: 0 0 auto;
+    transition: margin-left 600ms;
+  }
+  .next-slide,.previous-slide {
+    width: $carouselLinkWidth;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: $carouselArrowSize;
+      height: $carouselArrowSize;
+      transform: translate(-50%,-50%);
+      transition: opacity 300ms;
+    }
+    &:hover {
+      &:after {
+        opacity: 0.6;
+      }
+    }
+  }
+  .next-slide {
+    right: 0;
+    &:after {
+      background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E%3C!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' viewBox='0 0 477.175 477.175' style='enable-background:new 0 0 477.175 477.175;' xml:space='preserve' %3E%3Cg%3E%3Cpath d='M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5 c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z ' fill='#{str-replace(to-string($carouselArrowColor),"#","%23")}'/%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
+  .previous-slide {
+    left: 0;
+    &:after {
+      background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E%3C!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Capa_1' x='0px' y='0px' viewBox='0 0 477.175 477.175' style='enable-background:new 0 0 477.175 477.175;' xml:space='preserve' %3E%3Cg%3E%3Cpath d='M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225 c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z' fill='#{str-replace(to-string($carouselArrowColor),"#","%23")}'/%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
+  .indicators {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: $carouselIndicatorsBottom;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    li {
+      width: $carouselIndicatorsWidth;
+      height: $carouselIndicatorsHeight;
+      background-color: $carouselIndicatorsColor;
+      opacity: 0.5;
+      display: inline-block;
+      margin-left: $carouselIndicatorsSpace / 2;
+      margin-right: $carouselIndicatorsSpace / 2;
+      cursor: pointer;
+      transition: opacity 300ms;
+      &:hover,&.active {
+        opacity: 1;
+      }
+    }
+  }
+}

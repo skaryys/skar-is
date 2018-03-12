@@ -1,0 +1,12 @@
+//progress bar component
+.c-progress {
+  width: 100%;
+  height: $progressHeight;
+  -webkit-appearance: none;
+  &::-webkit-progress-bar {
+    background-color: $progressBg;
+  }
+  &::-webkit-progress-value {
+    background-color: $progressValueBg;
+  }
+}

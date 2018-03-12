@@ -1,8 +1,3 @@
-//circle image
-.c-circle {
-  border-radius: 50%;
-}
-
 //media wrappers for responsive images, embed videos, HTML5 <videos>
 
 %c-mediaWrapper {
@@ -20,22 +15,22 @@
   }
 }
 
-.c-mediaWrapper-21_9 { //21:9 image ratio
+.c-mediaWrapper-21_9 { //21:9 ratio
   @extend %c-mediaWrapper;
   padding-bottom: 9 / 21 * 100%;
 }
 
-.c-mediaWrapper-16_9 { //16:9 image ratio
+.c-mediaWrapper-16_9 { //16:9 ratio
   @extend %c-mediaWrapper;
   padding-bottom: 9 / 16 * 100%;
 }
 
-.c-mediaWrapper-4_3 { //4:3 image ratio
+.c-mediaWrapper-4_3 { //4:3 ratio
   @extend %c-mediaWrapper;
   padding-bottom: 3 / 4 * 100%;
 }
 
-.c-mediaWrapper-1_1 { //1:1 image ratio
+.c-mediaWrapper-1_1 { //1:1 ratio
   @extend %c-mediaWrapper;
   padding-bottom: 100%;
 }
