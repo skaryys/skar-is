@@ -6,6 +6,13 @@
         var modalId = $("#"+modal);
 
         if (action === "open") {
+            $("html").css("overflow","hidden");
+            $("body").css("overflow","hidden");
+            document.ontouchmove = function (e) {
+                if (!$(modalId).has($(e.target)).length) {
+                    e.preventDefault();
+                }
+            };
             $(".c-overlay").css("display","block");
             modalId.css("display","block");
             setTimeout(function () {
@@ -15,6 +22,11 @@
         }
 
         if (action === "close") {
+            $("html").css("overflow","auto");
+            $("body").css("overflow","auto");
+            document.ontouchmove = function () {
+                return true;
+            };
             $(".c-overlay").css("opacity","0");
             modalId.css("opacity","0");
             setTimeout(function () {

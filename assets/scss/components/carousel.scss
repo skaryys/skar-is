@@ -2,8 +2,9 @@
 .c-carousel {
   position: relative;
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
   .slide {
+    width: 100% / $carouselCurrentSlides;
     flex: 0 0 auto;
     transition: margin-left 600ms;
   }

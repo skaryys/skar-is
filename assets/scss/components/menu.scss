@@ -170,6 +170,12 @@
         .nav-list {
           li {
             line-height: $menuVerticalLineHeight;
+            a {
+              transition: opacity 300ms;
+              &:hover {
+                opacity: 0.7;
+              }
+            }
           }
         }
         .hamburger {

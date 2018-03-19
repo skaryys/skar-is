@@ -10,6 +10,7 @@
   padding-right: $textInputPadding;
   height: $textInputHeight;
   color: $textInputColor;
+  -moz-appearance: textfield;
   &:focus {
     border: $textInputBorderFocus;
     color: $textInputColorFocus;
@@ -17,38 +18,105 @@
   &::-webkit-input-placeholder {
     color: $textInputColor;
   }
+  &::-ms-clear {
+    display: none;
+  }
 }
 
-//specific styles for select when using .c-input class
-select.c-input:not([multiple]) {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cstyle%3E.path-drop-st0{fill:#{str-replace(to-string($selectArrowColor),"#","%23")}}%3C/style%3E%3Cpath class='path-drop-st0' d='M6 6L0 0h12L6 6z'/%3E%3C/svg%3E");
+//specific styles for select and textarea when using .c-input class
+select.c-input {
+  &[multiple] {
+    @include ie() {
+      padding-right: 0;
+    }
+  }
+  &:not([multiple]) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6' fill='#{$selectArrowColor}'%3E%3Cpath d='M6 6L0 0h12L6 6z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: $selectArrowWidth $selectArrowHeight;
     background-position: right $selectArrowRight top $selectArrowTop;
     padding-right: $selectArrowRight + $selectArrowWidth + $textInputPadding;
     &:focus {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cstyle%3E.path-drop-st0{fill:#{str-replace(to-string($selectArrowFocusColor),"#","%23")}}%3C/style%3E%3Cpath class='path-drop-st0' d='M6 6L0 0h12L6 6z'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6' fill='#{$selectArrowFocusColor}'%3E%3Cpath d='M6 6L0 0h12L6 6z'/%3E%3C/svg%3E");
     }
+    &::-ms-value {
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+}
+
+textarea.c-input {
+  height: auto;
 }
 
 //Range input
 .c-rangeInput {
   @include disableDefaults;
+  padding: 0;
   width: 100%;
-  &::-webkit-slider-thumb {
+  background: transparent;
+  &::-webkit-slider-thumb{
     -webkit-appearance: none;
-    border: $rangeInputThumbBorder;
+    border: $rangeInputThumbBorderWidth solid $rangeInputThumbBorderColor;
     height: $rangeInputThumbHeight;
     width: $rangeInputThumbWidth;
     background-color: $rangeInputThumbBg;
     cursor: pointer;
-    margin-top: $rangeInputThumbMargin;
+    margin-top: - $rangeInputThumbHeight / 2 + $rangeInputThumbBorderWidth;
+    border-radius: $rangeInputThumbBorderRadius;
+    @include edge() {
+      margin-top: 0;
+    }
   }
   &::-webkit-slider-runnable-track {
     width: 100%;
     height: $rangeInputSliderHeight;
     cursor: pointer;
     background: $rangeInputSliderBg;
+    border-radius: $rangeInputSliderHeight;
+  }
+  &::-ms-track {
+    width: 100%;
+    height: $rangeInputSliderHeight / 2;
+    border-radius: $rangeInputSliderHeight;
+    cursor: pointer;
+    background: transparent;
+    border: ($rangeInputThumbHeight - $rangeInputSliderHeight) / 2 solid transparent;
+    border-left: 0;
+    border-right: 0;
+    color: transparent;
+  }
+  &::-ms-thumb {
+    height: $rangeInputThumbHeight / 2;
+    width: $rangeInputThumbWidth / 2;
+    background-color: $rangeInputThumbBg;
+    border-radius: $rangeInputThumbBorderRadius;
+    cursor: pointer;
+    border: $rangeInputThumbBorderWidth solid $rangeInputThumbBorderColor;
+  }
+  &::-ms-fill-lower {
+    background: $rangeInputSliderBg;
+    border-radius: $rangeInputSliderHeight;
+  }
+  &::-ms-fill-upper {
+    background: $rangeInputSliderBg;
+    border-radius: $rangeInputSliderHeight;
+  }
+  &::-moz-range-thumb {
+    border: $rangeInputThumbBorderWidth solid $rangeInputThumbBorderColor;
+    height: $rangeInputThumbHeight;
+    width: $rangeInputThumbWidth;
+    background-color: $rangeInputThumbBg;
+    cursor: pointer;
+    border-radius: $rangeInputThumbBorderRadius;
+  }
+  &::-moz-range-track {
+    width: 100%;
+    height: $rangeInputSliderHeight;
+    cursor: pointer;
+    background: $rangeInputSliderBg;
+    border-radius: $rangeInputSliderHeight;
   }
 }
 

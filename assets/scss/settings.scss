@@ -60,6 +60,7 @@ $menuVerticalNavBottom: 4rem;
 $menuVerticalLineHeight: 5rem;
 
 //CAROUSEL COMPONENT SETTINGS
+$carouselCurrentSlides: 1;
 $carouselLinkWidth: 8rem;
 $carouselArrowSize: 4rem;
 $carouselArrowColor: white;
@@ -88,12 +89,13 @@ $textInputColor: #A9A8B2;
 $textInputColorFocus: #282828;
 $textInputPlaceholderColor: #A9A8B2;
 //range input
-$rangeInputThumbBorder: .2rem solid #A9A8B2;
-$rangeInputThumbHeight: 3.6rem;
+$rangeInputThumbBorderWidth: .2rem;
+$rangeInputThumbBorderColor: #A9A8B2;
+$rangeInputThumbHeight: 1.6rem;
 $rangeInputThumbWidth: 1.6rem;
 $rangeInputThumbBg: white;
-$rangeInputThumbMargin: -1.4rem;
-$rangeInputSliderHeight: 0.84rem;
+$rangeInputThumbBorderRadius: 50%;
+$rangeInputSliderHeight: 0.5rem;
 $rangeInputSliderBg: #282828;
 //svg input (radio+checkbox)
 $svgInputWidthHeight: 2.4rem;

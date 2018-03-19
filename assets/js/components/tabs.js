@@ -3,14 +3,14 @@
     //show tab
     $.fn.showTab = function(tabs,tab) {
 
-        var hideAll = function (callback) {
+        var hideAll = function () {
             var tabsElement = $(".c-tabs[data-tabs="+tabs+"]");
             tabsElement.children(".tab").each(function() {
                 $(this).removeClass("active");
+                $(this).css("opacity","0");
                 var that = this;
                 setTimeout(function () {
-                    $(that).removeClass("visible");
-                    callback();
+                    $(that).css("display","none");
                 }, 300);
             });
         };
@@ -18,13 +18,16 @@
         var showOne = function () {
             var tabsElement = $(".c-tabs[data-tabs="+tabs+"]");
             var tabNumber = tabsElement.children(".tab:nth-of-type("+tab+")");
-            tabNumber.addClass("visible");
+            tabNumber.css("display","block");
             setTimeout(function () {
-                tabNumber.addClass("active");
+                tabNumber.css("opacity","1");
             }, 1);
         };
 
-        hideAll(showOne());
+        hideAll();
+        setTimeout(function () {
+            showOne();
+        }, 301);
 1
     };
 
