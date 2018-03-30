@@ -1,6 +1,7 @@
 //horizontal menu component
 .c-menu {
   position: relative;
+  z-index: 3;
   top: 0;
   width: 100%;
   max-height: $menuHeight;
