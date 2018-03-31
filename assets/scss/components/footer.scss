@@ -1,13 +1,17 @@
 //add this class to body cause of sticky footer
 .c-stickyFooterBody {
-  margin-bottom: $footerHeight;
+  @include break($footerBreakpoint) {
+    margin-bottom: $footerHeight;
+  }
 }
 
 //footer class
 .c-stickyFooter {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  height: $footerHeight;
   background-color: $footerBg;
+  @include break($footerBreakpoint) {
+    position: absolute;
+    bottom: 0;
+    height: $footerHeight;
+  }
 }
