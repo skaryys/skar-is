@@ -11,7 +11,7 @@
 
         var nextAction = function() {
             var firstChild = crs.children(".slide:first");
-            var marginLeft =  - firstChild.width();
+            var marginLeft =  - firstChild.outerWidth();
             firstChild.css("marginLeft",marginLeft);
             setTimeout(function () {
                 firstChild.removeAttr("style");
@@ -23,7 +23,7 @@
 
         var previousAction = function() {
             var lastChild = crs.children(".slide:last");
-            var marginPreviousLeft = - lastChild.width();
+            var marginPreviousLeft = - lastChild.outerWidth();
             lastChild.css("marginLeft",marginPreviousLeft);
             crs.prepend(lastChild);
             setTimeout(function () {
