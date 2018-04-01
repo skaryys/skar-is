@@ -15,7 +15,7 @@ gulp.task("styles", function() {
    return gulp.src("assets/scss/main.scss")
        .pipe(sass().on("error",sass.logError))
        .pipe(autoprefixer({
-           browsers: supportedBrowsers
+           browsers: supportedBrowsers, grid: true
        }))
        .pipe(cssnano())
        .pipe(gulp.dest("dist"))
