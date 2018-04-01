@@ -1,5 +1,5 @@
 
-![skar-is logo](http://skaris.skaramart.in/img/logo.png)
+![skar-is logo](http://skaris.skaramart.in/logo.png)
 
 CSS library improving the development of websites graphical interface
 
