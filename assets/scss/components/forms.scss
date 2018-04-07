@@ -15,12 +15,29 @@
     border: $textInputBorderFocus;
     color: $textInputColorFocus;
   }
+  &.error {
+    border: $textInputBorderError;
+    color: $textInputColorError;
+  }
   &::-webkit-input-placeholder {
     color: $textInputColor;
   }
   &::-ms-clear {
     display: none;
   }
+}
+
+//form label
+.c-label {
+  display: block;
+  margin-bottom: $labelMarginBottom;
+}
+
+//formError
+.c-formError {
+  margin-top: $errorMarginTop;
+  margin-bottom: $errorMarginBottom;
+  color: $errorColor;
 }
 
 //specific styles for select and textarea when using .c-input class

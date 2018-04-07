@@ -87,8 +87,10 @@ $textInputPadding: 1.5rem;
 $textInputFontSize: 1.8rem;
 $textInputBorder: .2rem solid #A9A8B2;
 $textInputBorderFocus: .2rem solid #282828;
+$textInputBorderError: .2rem solid red;
 $textInputColor: #A9A8B2;
 $textInputColorFocus: #282828;
+$textInputColorError: red;
 $textInputPlaceholderColor: #A9A8B2;
 //range input
 $rangeInputThumbBorderWidth: .2rem;
@@ -121,6 +123,12 @@ $buttonHeight: 5rem;
 $buttonBg: #282828;
 $buttonColor: white;
 $buttonFontSize: 1.6rem;
+//label
+$labelMarginBottom: 1rem;
+//error
+$errorMarginTop: 1rem;
+$errorMarginBottom: 1rem;
+$errorColor: red;
 
 //BREADCRUMBS COMPONENT SETTINGS
 $breadcrumbsPadding: 1.5rem 0;
