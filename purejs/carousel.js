@@ -34,7 +34,7 @@ window.slide = function(action, carousel, number) {
     const previousAction = function() {
         let lastChild = crs.querySelector(".slide:last-child");
         let marginPreviousLeft = - lastChild.offsetWidth;
-        firstChild.setAttribute("style", "margin-left:"+marginPreviousLeft+"px;");
+        lastChild.setAttribute("style", "margin-left:"+marginPreviousLeft+"px;");
         crs.insertBefore(lastChild, crs.querySelector(".slide:first-child"));
         setTimeout(function () {
             lastChild.removeAttribute("style");
